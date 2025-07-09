@@ -639,3 +639,92 @@ clearTimeout(timeoutId);
 ES6 MODULES 
 es6 Module = An external file that contains reusable 
              code that can be imported into other JS files. Write reusable code for many different apps. Can contain variables, classes, functions ... and more. Introduced as part of ECMAScript 2015 uppdate.
+
+
+DOM (DOCUMENT OBJECT MODULE)
+DOM = object{} that represents the page you see in the web browser and provides you with 
+      an API to interact with it. Web browser constructs the DOM when it loads
+      an HTML document, and structures all the elements in a tree-like 
+      representation. JS can access the DOM dynamically, change the content, 
+      structure, and style of a web page
+
+example 1
+''''
+const user = "Joel";
+const WelcomeMsg = document.getElementbyId("Welcome-msg");
+
+welcomeMsg.textContent += user === "" ? 'Guest' : user;
+''''
+
+ELEMENT SELECTORS 
+element selectors = Methods used to target and manipulate HTML elements
+                    They allow you to select one or multiple HTML elements 
+                    from the DOM 
+
+1. .getElementById() // element or NULL
+2. .getElementClassName() // HTML COLLECTION
+3. .getElementByTagName() // HTML COLLECTION
+4. .querySelector() // ELEMENT OR NULL
+5. .querySelectorAll() // NODELIST 
+
+example 1
+'''
+// looping through a collection (collections are iterable)
+const fruits = document.getElementByClassName("fruits");
+
+for(let fruit of fruits){
+fruit.style.backgroundColor = "yellow";
+}
+'''
+
+Collections are limited in their functionality. For example, they have no 
+forEach() method. 
+We can typecast the collection into an array in order to access more funcitonality 
+
+
+example 2
+'''
+const fruits = document.getElementByClassName("fruits");
+
+Array.from(fruits).forEach(fruit => {
+    fruit.style.backgroundColor = "yellow";
+});
+
+'''
+
+
+DOM NAVIGATION 
+DOM navigation = The process of navigating through the structure of an HTML
+                 document using Javascript. 
+
+1. .firstElementChild
+2. .lastElementChild
+3. nextElementSibling
+4. .previousElementSibling
+5. .parentElement
+6. .children 
+
+example 1
+'''
+// .firstElementChild 
+const element = document.getElementById("fruits");
+const firstChild = element.firstElementChild;
+firstChild.backgroundColor = "yellow";
+'''
+
+example 2
+'''
+// using querySelectorAll()
+const ulElements = document.querySelectorAll("ul");
+
+ulElements.forEach(ulElement => { // This will select every first child or all ul elements
+    const firstChild = ulElements.firstElementChild;
+    firstChild.style.backgroundColor = "yellow";
+})
+'''
+
+EVENT LISTENERS 
+eventListener = listen for specific events to create 
+                interactive web pages 
+                events: click, mouseover, mouseout, keydown, keyup, keypress (incompatible)
+                .addEventListener(event, callback);
