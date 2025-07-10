@@ -1,0 +1,27 @@
+#myH1 {
+    font-size: 5rem;
+}
+
+.buttons {
+    font-size: 4rem;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.enabled {
+    background-color: aqua;
+    color: white;
+}
+
+.hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.293);
+    font-weight: bold;
+}
+
+.disabled {
+    background-color: gray;
+    color: lightblue;
+
+}

@@ -737,3 +737,15 @@ NodeList = Static collection of HTML elements by
            no map, filter, reduce. They don't update 
            to automatically reflect changes to the DOM
 
+
+CLASS LIST
+classList = Element property in JS used to interact with an element's list of 
+            of classes (CSS classes). Allows us to make reusable classes for 
+            many elements across a webpage. 
+
+1. add()
+2. remove()
+3. toggle(remove if present, Add if not)
+4. replace(oldClass, newClass)
+5. contains()
+
