@@ -819,3 +819,11 @@ json = "JavaScript Object Notation" data-interchange format used for
 
        JSON.stringify() = converts a JS object to a JSON string. 
        JSON.parse() = converts a JSON string to a JS object.
+
+
+FETCH
+fetch = function used for making HTTP requests to fetch resources. 
+        (JSON style data, images, files)
+        Simplifies asynchronous data fetching in JS and used for interacting 
+        with APIs to retrieve and send data asynchronously over the web. 
+        fetch(url, {options})
